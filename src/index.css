@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #222831;
+  --text-color: #eeeeee;
+
+  --color-surface: #31363f;
+
+  --color-accent-dark: #4d7c7f;
+  --color-accent: #76abae;
+  --color-accent-light: #a3cccf;
+
+  /* Glass tokens */
+  --glass-border: transparent;
+  --glass-shadow: 0 8px 24px rgba(118, 171, 174, 0.35);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Light mode */
+  html.light {
+    --color-background: #eeeeee;
+    --text-color: #222831;
+    --color-surface: #ffffff;
+
+    /* Light glass */
+    --glass-border: rgba(34, 40, 49, 0.1);
+    --glass-shadow: 0 8px 24px rgba(118, 171, 174, 0.35);
+  }
+
+  .material-symbols-outlined {
+    font-family: "Material Symbols Outlined";
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--text-color);
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+@layer components {
+  .glass {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    background-color: var(--color-surface);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+}
