@@ -6,7 +6,6 @@
 
   --color-surface: #31363f;
 
-  --color-accent-dark: #4d7c7f;
   --color-accent: #76abae;
   --color-accent-light: #a3cccf;
 
@@ -23,7 +22,7 @@
   /* Light mode */
   html.light {
     --color-background: #eeeeee;
-    --text-color: #222831;
+    --text-color: #2b3a3d;
     --color-surface: #ffffff;
 
     /* Light glass */
@@ -47,6 +46,11 @@
     background-color: var(--color-background);
     color: var(--text-color);
     font-family: "Roboto", sans-serif;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-background);
   }
 }
 

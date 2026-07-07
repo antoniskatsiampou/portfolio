@@ -1,26 +1,16 @@
-function Hero() {
+function Footer() {
+  const year = new Date().getFullYear();
+
   return (
-    <section
-      id="hero"
-      className="min-h-screen flex flex-col md:flex-row items-center justify-center gap-12 px-4"
-    >
-      {/* Left text */}
-      <div className="flex flex-col items-center md:items-start text-center md:text-left">
-        <h1 className="text-4xl md:text-6xl font-bold">
-          Hi, I'm <span className="text-accent">Antonis</span>
-        </h1>
-
-        <h2 className="text-xl md:text-2xl text-accent-light mt-4">
-          MSc in Computer Science
-        </h2>
-
-        <p className="max-w-xl mt-6 opacity-80">
-          I'm a 25 years old aspiring developer, ready to take a deep dive into
-          the Software/Web industry.
+    <footer className="border-t border-accent/20 py-4 px-4">
+      <div className="container mx-auto flex items-center justify-center gap-4">
+        {/* Copyright */}
+        <p className="text-sm opacity-70">
+          &copy; {year} Antonis Katsiampouras
         </p>
 
         {/* Social links */}
-        <div className="flex items-center gap-4 mt-8">
+        <div className="flex items-center gap-4">
           <a
             href="https://www.linkedin.com/in/antonis-katsiampouras-618056301/"
             target="_blank"
@@ -31,8 +21,8 @@ function Hero() {
             <svg
               role="img"
               viewBox="0 0 24 24"
-              width="28"
-              height="28"
+              width="22"
+              height="22"
               fill="currentColor"
               aria-hidden="true"
             >
@@ -50,35 +40,18 @@ function Hero() {
             <svg
               role="img"
               viewBox="0 0 24 24"
-              width="28"
-              height="28"
+              width="22"
+              height="22"
               fill="currentColor"
               aria-hidden="true"
             >
               <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
             </svg>
           </a>
-
-          <a
-            href="/cv.pdf"
-            download
-            className="rounded-full bg-accent text-background font-medium px-5 py-2 hover:bg-accent-light transition-colors duration-200"
-          >
-            Download CV
-          </a>
         </div>
       </div>
-
-      {/* Right photo */}
-      <div className="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-accent shadow-[var(--glass-shadow)] shrink-0">
-        <img
-          src="/profile-photo-removebg-preview.png"
-          alt="Antonis"
-          className="w-full h-full object-cover"
-        />
-      </div>
-    </section>
+    </footer>
   );
 }
 
-export default Hero;
+export default Footer;

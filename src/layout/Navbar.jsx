@@ -3,19 +3,18 @@ import { Menu, X } from "lucide-react";
 import ThemeToggle from "@/components/ThemeToggle";
 
 const links = [
-  { href: "#about", label: "About" },
+  { href: "#hero", label: "Home" },
+  { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
   { href: "#coursework", label: "Coursework" },
   { href: "#experience", label: "Experience" },
-  { href: "#contact", label: "Contact" },
 ];
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Theme state
   const [isLight, setIsLight] = useState(
-    () => localStorage.getItem("theme") === "light"
+    () => localStorage.getItem("theme") === "light",
   );
 
   useEffect(() => {
@@ -26,7 +25,7 @@ function Navbar() {
   const toggleTheme = () => setIsLight((v) => !v);
 
   return (
-    <header className="fixed top-0 left-0 right-0 pt-5 z-50">
+    <header className="fixed top-0 left-0 right-0 py-4 z-50 bg-surface/80 backdrop-blur-md border-b border-accent/20 shadow-[0_4px_20px_rgba(118,171,174,0.15)]">
       <nav className="container mx-auto flex justify-between md:grid md:grid-cols-3 items-center gap-4 px-4">
         {/* Left logo */}
         <a href="#" className="text-2xl hover:text-accent justify-self-start">
@@ -36,7 +35,7 @@ function Navbar() {
         </a>
 
         {/* Center links */}
-        <div className="glass hidden md:flex justify-self-center">
+        <div className="hidden md:flex gap-6 justify-self-center">
           {links.map((link, index) => (
             <a
               key={index}
