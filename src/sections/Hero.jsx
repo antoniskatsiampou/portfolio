@@ -10,13 +10,13 @@ function Hero() {
           Hi, I'm <span className="text-accent">Antonis</span>
         </h1>
 
-        <h2 className="text-xl md:text-2xl text-accent-light mt-4">
-          MSc in Computer Science
+        <h2 className="text-xl md:text-2xl font-semibold text-accent mt-4">
+          MSc in Applied Informatics
         </h2>
 
-        <p className="max-w-xl mt-6 opacity-80">
-          I'm a 25 years old aspiring developer, ready to take a deep dive into
-          the Software/Web industry.
+        <p className="max-w-xl mt-6 text-xl font-medium opacity-70">
+          MSc coursework done, thesis in progress. Eager to deep dive into the
+          Software/Web industry and never stop learning.
         </p>
 
         {/* Social links */}
@@ -59,13 +59,6 @@ function Hero() {
             </svg>
           </a>
 
-          <a
-            href="/cv.pdf"
-            download
-            className="rounded-full bg-accent text-background font-medium px-5 py-2 hover:bg-accent-light transition-colors duration-200"
-          >
-            Download CV
-          </a>
         </div>
       </div>
 

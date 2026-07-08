@@ -33,7 +33,7 @@ function Experience() {
           {experiences.map((exp) => (
             <div
               key={exp.role}
-              className="glass !flex-col !items-stretch !rounded-2xl gap-3 p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_32px_rgba(118,171,174,0.55)]"
+              className="glass !flex-col !items-stretch !rounded-2xl gap-3 p-6 border-2 border-transparent transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_32px_rgba(118,171,174,0.55)] hover:border-accent"
             >
               <div className="flex items-start justify-between gap-4">
                 <h3 className="text-lg font-semibold">{exp.role}</h3>

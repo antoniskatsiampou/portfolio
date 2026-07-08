@@ -24,11 +24,28 @@ function Navbar() {
 
   const toggleTheme = () => setIsLight((v) => !v);
 
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    const id = href.replace("#", "");
+    if (id) {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      history.pushState(null, "", `/${id}`);
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      history.pushState(null, "", "/");
+    }
+    setIsOpen(false);
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 py-4 z-50 bg-surface/80 backdrop-blur-md border-b border-accent/20 shadow-[0_4px_20px_rgba(118,171,174,0.15)]">
       <nav className="container mx-auto flex justify-between md:grid md:grid-cols-3 items-center gap-4 px-4">
         {/* Left logo */}
-        <a href="#" className="text-2xl hover:text-accent justify-self-start">
+        <a
+          href="#"
+          onClick={(e) => handleNavClick(e, "#")}
+          className="text-2xl hover:text-accent justify-self-start"
+        >
           <strong>
             Antonis K<span className="text-accent">.</span>
           </strong>
@@ -40,7 +57,8 @@ function Navbar() {
             <a
               key={index}
               href={link.href}
-              className="text-base hover:text-accent whitespace-nowrap"
+              onClick={(e) => handleNavClick(e, link.href)}
+              className="text-lg font-semibold hover:text-accent whitespace-nowrap"
             >
               {link.label}
             </a>
@@ -74,7 +92,7 @@ function Navbar() {
               <a
                 key={index}
                 href={link.href}
-                onClick={() => setIsOpen(false)}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className="text-base hover:text-accent px-2 py-1"
               >
                 {link.label}

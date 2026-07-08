@@ -5,7 +5,7 @@ function Footer() {
     <footer className="border-t border-accent/20 py-4 px-4">
       <div className="container mx-auto flex items-center justify-center gap-4">
         {/* Copyright */}
-        <p className="text-sm opacity-70">
+        <p className="text-base opacity-70">
           &copy; {year} Antonis Katsiampouras
         </p>
 

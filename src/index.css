@@ -21,12 +21,16 @@
 
   /* Light mode */
   html.light {
-    --color-background: #eeeeee;
-    --text-color: #2b3a3d;
+    --color-background: #dfe5e8;
+    --text-color: #4b5563;
     --color-surface: #ffffff;
 
+    /* Darker accent for readability on light background */
+    --color-accent: #3f7a7d;
+    --color-accent-light: #5f979a;
+
     /* Light glass */
-    --glass-border: rgba(34, 40, 49, 0.1);
+    --glass-border: rgba(34, 40, 49, 0.12);
     --glass-shadow: 0 8px 24px rgba(118, 171, 174, 0.35);
   }
 

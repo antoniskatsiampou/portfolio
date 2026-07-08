@@ -106,7 +106,7 @@ const courses = [
 
 function CourseCard({ course }) {
   return (
-    <div className="glass !flex-col !items-stretch !rounded-2xl gap-4 p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_32px_rgba(118,171,174,0.55)]">
+    <div className="glass !flex-col !items-stretch !rounded-2xl gap-3 p-5 border-2 border-transparent transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_32px_rgba(118,171,174,0.55)] hover:border-accent">
       <div className="flex items-start justify-between gap-4">
         <h3 className="text-base font-semibold">{course.title}</h3>
 
@@ -137,11 +137,11 @@ function Coursework() {
           <span className="text-accent">Coursework</span>
         </h2>
 
-        <h4 className="text-center text-sm opacity-80 mt-3">
-          MSc in Computer Science — full coursework
+        <h4 className="text-center text-xl font-semibold opacity-80 mt-3">
+          MSc in Computer Science full coursework
         </h4>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10 max-w-5xl mx-auto">
           {courses.map((course) => (
             <CourseCard key={course.title} course={course} />
           ))}
