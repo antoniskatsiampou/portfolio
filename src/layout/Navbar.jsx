@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import ThemeToggle from "@/components/ThemeToggle";
 
 const links = [
-  { href: "#hero", label: "Home" },
+  { href: "#", label: "Home" },
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
   { href: "#coursework", label: "Coursework" },
