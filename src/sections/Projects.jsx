@@ -40,7 +40,7 @@ const projects = [
     github: "https://github.com/antoniskatsiampou/HighwayRun",
   },
   {
-    title: "Ministry of Education Information System",
+    title: "School Management",
     description:
       "A desktop Java application prototyping an information system for the Ministry of Education. ",
     category: "java",
