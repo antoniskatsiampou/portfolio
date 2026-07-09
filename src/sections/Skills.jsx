@@ -2,10 +2,10 @@ const skillGroups = [
   {
     label: "Front End",
     items: [
-      { name: "React", icon: "React" },
-      { name: "JavaScript", icon: "JavaScript" },
       { name: "HTML5", icon: "HTML5" },
       { name: "CSS3", icon: "CSS3" },
+      { name: "JavaScript", icon: "JavaScript" },
+      { name: "React", icon: "React" },
       { name: "Tailwind CSS", icon: "Tailwind CSS" },
       { name: "Bootstrap", icon: "Bootstrap" },
     ],
